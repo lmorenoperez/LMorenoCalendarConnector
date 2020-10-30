@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -91,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LMorenoCalendarConnector\LMorenoCalendarConnector.csproj">
-      <Project>{07B18912-687C-4785-9223-CB699DB8691D}</Project>
+      <Project>{83D73888-9320-4656-A2CB-3E0C87C6DC38}</Project>
       <Name>LMorenoCalendarConnector</Name>
     </ProjectReference>
   </ItemGroup>

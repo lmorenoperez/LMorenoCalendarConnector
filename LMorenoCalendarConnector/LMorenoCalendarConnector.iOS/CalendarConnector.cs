@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 using LMorenoCalendarConnector.iOS;
 using LMorenoCalendarConnector.Abstractions;
+using LMorenoCalendarConnector.Models;
 
 [assembly: Xamarin.Forms.Dependency(typeof(CalendarConnector))]
 namespace LMorenoCalendarConnector.iOS
 {
     
-    public class CalendarConnector
+    public class CalendarConnector : ICalendarConnector
     {
         public static void Init() { eventStore = new EKEventStore(); }
 
@@ -64,6 +65,23 @@ namespace LMorenoCalendarConnector.iOS
                 Console.WriteLine("Event Saved, ID: " + newEvent.CalendarItemIdentifier);
             }
         }
+
+        //
+
+        public List<Item> GetAppointments(string CalendarId)
+        {
+            List<Item> CalendarItems = new List<Item>();
+
+            CalendarItems.Add(new Item { Id = "1", Text = "1", Description = "1", AppointmentDateTime = DateTime.Now });
+
+            return CalendarItems;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reminder"></param>
+        /// <param name="startTime"></param>
+        /// <returns></returns>
 
 
         private EKAlarm ConvertReminder(AppointmentReminder reminder, DateTime startTime)

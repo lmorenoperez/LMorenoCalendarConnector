@@ -26,8 +26,9 @@ namespace LMorenoCalendarConnector.ViewModels
             //var _permissionsUtil = CrossPermissions.Current;// DependencyService.Get<IPermissions>();
             //await _permissionsUtil.RequestPermissionsAsync(new Permission[] { Permission.Calendar, Permission.Contacts, Permission.Storage });
 
-            //DateTime dt1 = DateTime.Now.AddMinutes(1);
-            //DependencyService.Get<ICalendarConnector>().AddAppointment(DateTime.Now.AddHours(5), DateTime.Now.AddHours(5).AddMinutes(30), "Testing Carlendar 5 hours", "Miami", "Miami Boat Show", false,AppointmentReminder.five, AppointmentStatus.busy);
+            //
+            DateTime dt1 = DateTime.Now.AddMinutes(1);
+            DependencyService.Get<ICalendarConnector>().AddAppointment(DateTime.Now.AddHours(5), DateTime.Now.AddHours(5).AddMinutes(30), "Testing Carlendar 5 hours", "Miami", "Miami Boat Show", false,AppointmentReminder.five, AppointmentStatus.busy,"",2,"UTC");
 
 
             //await Application.Current.MainPage.DisplayAlert("AA", "BB", "Ok");
